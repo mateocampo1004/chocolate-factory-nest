@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { HttpExceptionFilter } from './filters/http-exception.filter';
+
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
 
@@ -13,7 +13,7 @@ async function bootstrap() {
   });
 
   // Global Exception Filter
-  app.useGlobalFilters(new HttpExceptionFilter());
+ 
 
   // Swagger Configuration
   const config = new DocumentBuilder()
